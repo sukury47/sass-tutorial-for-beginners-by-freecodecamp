@@ -4,28 +4,35 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="css/index.css")
-    title Mike Smith Portfolio
+    title Contact Smith Projects
   body
     header
       div.menu-btn
         span.menu-btn__burger
       nav.nav
         ul.menu-nav
-          li(class=["menu-nav__item", "active"])
+          li.menu-nav__item
             a(class="menu-nav__link", href="index.html") Home
           li.menu-nav__item
             a(class="menu-nav__link", href="about.html") About Me
           li.menu-nav__item
-            a(class="menu-nav__link", href="projects.html") My Projects
-          li.menu-nav__item
+            a(class="menu-nav__link", href="projects.html") My Projects         
+          li(class=["menu-nav__item","active"])
             a(class="menu-nav__link", href="contact.html") Contact Me
     main
-      section.home
-        h2 Hi My Name Is
-        h1.home__name
-          | Mike
-          span.home__name--last Smith
-        h2 Web Developer, Designer & Programmer
+      section.contact
+        h2 Contact Me..
+        .contact__list
+          .contact__email
+            i(class=['fas', 'fas-envelope']) Email
+            .text-secondary email@email.com
+          .contact__phone
+            i(class=['fas', 'fa-mobile-alt']) Phone
+            .text-secondary +1 (555) 555-5555
+          .contact__address
+            i(class=['fas', 'fa-marker-alt']) Address
+            .text-secondary 123 First St. Housto, TX
+
 
         .social-icons
           a(href='#')
