@@ -1,60 +1,52 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="css/index.css")
-    title About Mike Smith Portfolio
-  body
-    header
-      div.menu-btn
-        span.menu-btn__burger
-      nav.nav
-        ul.menu-nav
-          li.menu-nav__item
-            a(class="menu-nav__link", href="index.html") Home
-          li(class=["menu-nav__item","active"])
-            a(class="menu-nav__link", href="about.html") About Me
-          li.menu-nav__item
-            a(class="menu-nav__link", href="projects.html") My Projects
-          li.menu-nav__item
-            a(class="menu-nav__link", href="contact.html") Contact Me
-    main
-      section.about
-        .about__bio-image
-          .about__bio
-            h2.text-secondary BIO
-            p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        
-        .jobs
-          .jobs__job
-            h2.text-secondary 2017 -Current
-            h3 Google
-            h6 Full Stack Developer
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          .jobs__job
-            h2.text-secondary 2015 - 2017
-            h3 Microsoft
-            h6 Front Ebd Developer
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          .jobs__job
-            h2.text-secondary 2012 - 2015
-            h3 Web Design Co.
-            h6 Graphic Developer
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+extends templates/layout.pug
+block variables
+  -var title = 'About Mike Smith Portfolio'
 
-        .social-icons
-          a(href='#')
-            i(class=['fab fa-twitter fa-2x'])
-          a(href='#')
-            i(class=['fab fa-facebook fa-2x'])
-          a(href='#')
-            i(class=['fab fa-instagram fa-2x'])
-          a(href='#')
-            i(class=['fab fa-github fa-2x'])
-    footer
-      | &copy; Copyright 2019
-    
-    script(src="js/index.js")
+block content
+  header
+    div.menu-btn
+      span.menu-btn__burger
+    nav.nav
+      ul.menu-nav
+        li.menu-nav__item
+          a(class="menu-nav__link", href="index.html") Home
+        li(class=["menu-nav__item","active"])
+          a(class="menu-nav__link", href="about.html") About Me
+        li.menu-nav__item
+          a(class="menu-nav__link", href="projects.html") My Projects
+        li.menu-nav__item
+          a(class="menu-nav__link", href="contact.html") Contact Me
+  main
+    section.about
+      .about__bio-image
+        .about__bio
+          h2.text-secondary BIO
+          p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      
+      .jobs
+        .jobs__job
+          h2.text-secondary 2017 -Current
+          h3 Google
+          h6 Full Stack Developer
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .jobs__job
+          h2.text-secondary 2015 - 2017
+          h3 Microsoft
+          h6 Front Ebd Developer
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .jobs__job
+          h2.text-secondary 2012 - 2015
+          h3 Web Design Co.
+          h6 Graphic Developer
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
+      .social-icons
+        a(href='#')
+          i(class=['fab fa-twitter fa-2x'])
+        a(href='#')
+          i(class=['fab fa-facebook fa-2x'])
+        a(href='#')
+          i(class=['fab fa-instagram fa-2x'])
+        a(href='#')
+          i(class=['fab fa-github fa-2x'])

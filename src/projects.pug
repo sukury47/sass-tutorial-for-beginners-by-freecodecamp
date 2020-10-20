@@ -1,84 +1,77 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="css/index.css")
-    title Mike Smith Projects
-  body
-    header
-      div.menu-btn
-        span.menu-btn__burger
-      nav.nav
-        ul.menu-nav
-          li.menu-nav__item
-            a(class="menu-nav__link", href="index.html") Home
-          li.menu-nav__item
-            a(class="menu-nav__link", href="about.html") About Me
-          li(class=["menu-nav__item","active"])
-            a(class="menu-nav__link", href="projects.html") My Projects
-          li.menu-nav__item
-            a(class="menu-nav__link", href="contact.html") Contact Me
-    main
-      section.projects
-        .projects__bio-image
-          h1.text-secondary My Projects
+extends templates/layout.pug
+block variables
+  -var title = 'Mike Smith Projects'
 
-        .projects__items
-          .projects__item
-            img(src="img/project-1.jpg", alt="My project")
-            .projects__btns
-              a(class="projects__btn", href="#")
-                i(class=["fas", "fa-eye"]) Preview
-              a(class="projects__btn", href="#")
-                i(class=["fab", "fa-github"]) Github
-          .projects__item
-            img(src="img/project-2.jpg", alt="My project")
-            .projects__btns
-              a(class="projects__btn", href="#")
-                i(class=["fas", "fa-eye"]) Preview
-              a(class="projects__btn", href="#")
-                i(class=["fab", "fa-github"]) Github
-          .projects__item
-            img(src="img/project-3.jpg", alt="My project")
-            .projects__btns
-              a(class="projects__btn", href="#")
-                i(class=["fas", "fa-eye"]) Preview
-              a(class="projects__btn", href="#")
-                i(class=["fab", "fa-github"]) Github
-          .projects__item
-            img(src="img/project-4.jpg", alt="My project")
-            .projects__btns
-              a(class="projects__btn", href="#")
-                i(class=["fas", "fa-eye"]) Preview
-              a(class="projects__btn", href="#")
-                i(class=["fab", "fa-github"]) Github
-          .projects__item
-            img(src="img/project-5.jpg", alt="My project")
-            .projects__btns
-              a(class="projects__btn", href="#")
-                i(class=["fas", "fa-eye"]) Preview
-              a(class="projects__btn", href="#")
-                i(class=["fab", "fa-github"]) Github
-          .projects__item
-            img(src="img/project-6.jpg", alt="My project")
-            .projects__btns
-              a(class="projects__btn", href="#")
-                i(class=["fas", "fa-eye"]) Preview
-              a(class="projects__btn", href="#")
-                i(class=["fab", "fa-github"]) Github
-          
-        .social-icons
-          a(href='#')
-            i(class=['fab fa-twitter fa-2x'])
-          a(href='#')
-            i(class=['fab fa-facebook fa-2x'])
-          a(href='#')
-            i(class=['fab fa-instagram fa-2x'])
-          a(href='#')
-            i(class=['fab fa-github fa-2x'])
-    footer
-      | &copy; Copyright 2019
-    
-    script(src="js/index.js")
+block content
+  header
+    div.menu-btn
+      span.menu-btn__burger
+    nav.nav
+      ul.menu-nav
+        li.menu-nav__item
+          a(class="menu-nav__link", href="index.html") Home
+        li.menu-nav__item
+          a(class="menu-nav__link", href="about.html") About Me
+        li(class=["menu-nav__item","active"])
+          a(class="menu-nav__link", href="projects.html") My Projects
+        li.menu-nav__item
+          a(class="menu-nav__link", href="contact.html") Contact Me
+  main
+    section.projects
+      .projects__bio-image
+        h1.text-secondary My Projects
+
+      .projects__items
+        .projects__item
+          img(src="img/project-1.jpg", alt="My project")
+          .projects__btns
+            a(class="projects__btn", href="#")
+              i(class=["fas", "fa-eye"]) Preview
+            a(class="projects__btn", href="#")
+              i(class=["fab", "fa-github"]) Github
+        .projects__item
+          img(src="img/project-2.jpg", alt="My project")
+          .projects__btns
+            a(class="projects__btn", href="#")
+              i(class=["fas", "fa-eye"]) Preview
+            a(class="projects__btn", href="#")
+              i(class=["fab", "fa-github"]) Github
+        .projects__item
+          img(src="img/project-3.jpg", alt="My project")
+          .projects__btns
+            a(class="projects__btn", href="#")
+              i(class=["fas", "fa-eye"]) Preview
+            a(class="projects__btn", href="#")
+              i(class=["fab", "fa-github"]) Github
+        .projects__item
+          img(src="img/project-4.jpg", alt="My project")
+          .projects__btns
+            a(class="projects__btn", href="#")
+              i(class=["fas", "fa-eye"]) Preview
+            a(class="projects__btn", href="#")
+              i(class=["fab", "fa-github"]) Github
+        .projects__item
+          img(src="img/project-5.jpg", alt="My project")
+          .projects__btns
+            a(class="projects__btn", href="#")
+              i(class=["fas", "fa-eye"]) Preview
+            a(class="projects__btn", href="#")
+              i(class=["fab", "fa-github"]) Github
+        .projects__item
+          img(src="img/project-6.jpg", alt="My project")
+          .projects__btns
+            a(class="projects__btn", href="#")
+              i(class=["fas", "fa-eye"]) Preview
+            a(class="projects__btn", href="#")
+              i(class=["fab", "fa-github"]) Github
+        
+      .social-icons
+        a(href='#')
+          i(class=['fab fa-twitter fa-2x'])
+        a(href='#')
+          i(class=['fab fa-facebook fa-2x'])
+        a(href='#')
+          i(class=['fab fa-instagram fa-2x'])
+        a(href='#')
+          i(class=['fab fa-github fa-2x'])
 
