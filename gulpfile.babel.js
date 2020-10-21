@@ -98,7 +98,7 @@ const webserver = () =>
 const watch = () => {
   gulp.watch(routes.pug.watch, html);
   gulp.watch(routes.img.src, img);
-  gulp.watch(routes.scss.src, styles);
+  gulp.watch(routes.scss.watch, styles);
   gulp.watch(routes.js.watch, js);
 };
 
