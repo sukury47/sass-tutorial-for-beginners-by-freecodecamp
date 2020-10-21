@@ -1,76 +1,28 @@
-@import '_config';
-@import '_reset';
-@import '_box-sizing';
-@import '_variables';
-
-@import '_home';
-@import '_menu';
-@import '_about';
-@import '_projects';
-@import '_contact';
-@import '_responsive';
-
+//1. vendor
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/brands';
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/solid';
 
-body {
-  background-color: $primary-color;
-  color: set-text-color($primary-color);
-  height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana,
-    sans-serif;
-  line-height: 1;
-}
+//2. utils
+@import 'helpers/variables';
+@import 'helpers/functions';
+@import 'helpers/mixins';
 
-h1,
-h2,
-h3 {
-  font-weight: 400;
-}
+//3. base
+@import 'base/reset';
+@import 'base/box-sizing';
+@import 'base/base';
 
-a {
-  color: set-text-color($primary-color);
-  text-decoration: none;
-}
+//4. layouts
 
-.text-secondary {
-  color: $secondary-color;
-}
+//5. components
 
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-  padding: 1rem;
-}
+//6. pages
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/projects';
+@import 'pages/contact';
 
-main {
-  height: 100%;
-  width: 100%;
+@import '_responsive';
 
-  .social-icons {
-    position: fixed;
-    bottom: 1rem;
-    left: 1rem;
-
-    a {
-      padding: 0.4rem;
-      @include transition-ease;
-
-      &:hover {
-        color: $secondary-color;
-      }
-    }
-  }
-}
-
-footer {
-  font-size: 1rem;
-  position: fixed;
-  bottom: 0.4rem;
-  right: 1rem;
-  text-align: right;
-  padding: 1rem;
-  color: set-text-color($primary-color);
-}
+//7. themes
