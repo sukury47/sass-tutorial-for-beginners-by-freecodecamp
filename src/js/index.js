@@ -10,6 +10,25 @@ const navItems = document.querySelectorAll(
 
 let showMenu = false;
 
+const activateNavLink = () => {
+  const getPath = () => {
+    const url = window.location.href;
+
+    return url.replace(
+      /https?:\/\/[a-zA-Z\d\.]*(:\d+)?\//,
+      ''
+    );
+  };
+
+  const activeNavLink = document.querySelector(
+    '.menu-nav__link[href="' + getPath() + '"]'
+  );
+
+  activeNavLink.parentNode.classList.add('active');
+};
+
+activateNavLink();
+
 menuBtn.addEventListener('click', () => {
   if (!showMenu) {
     hamburger.classList.add('open');

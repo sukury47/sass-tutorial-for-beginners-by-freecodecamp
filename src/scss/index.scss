@@ -14,8 +14,12 @@
 @import 'base/base';
 
 //4. layouts
+@import 'layouts/header';
+@import 'layouts/navigation';
+@import 'layouts/footer';
 
 //5. components
+@import 'components/social-icon';
 
 //6. pages
 @import 'pages/home';
