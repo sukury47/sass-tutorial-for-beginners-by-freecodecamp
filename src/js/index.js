@@ -1,3 +1,5 @@
+import { routes, getCurrentRoute } from './routes.js';
+
 const menuBtn = document.querySelector('.menu-btn');
 const hamburger = document.querySelector(
   '.menu-btn__burger'
@@ -10,24 +12,32 @@ const navItems = document.querySelectorAll(
 
 let showMenu = false;
 
-const activateNavLink = () => {
-  const getPath = () => {
-    const url = window.location.href;
+(() => {
+  const currentRoute = getCurrentRoute();
 
-    return url.replace(
-      /https?:\/\/[a-zA-Z\d\.]*(:\d+)?\//,
-      ''
+  //mark where am I
+  (() => {
+    const element = document.querySelector(
+      '.menu-nav__link[href="' + currentRoute.path + '"]'
+    );
+
+    element.parentNode.classList.add('active');
+  })();
+
+  const shouldFooterShowVertically = () => {
+    return (
+      ['about', 'projects'].indexOf(currentRoute.key) > -1
     );
   };
 
-  const activeNavLink = document.querySelector(
-    '.menu-nav__link[href="' + getPath() + '"]'
-  );
+  const footerElement = document.querySelector('footer');
 
-  activeNavLink.parentNode.classList.add('active');
-};
-
-activateNavLink();
+  if (shouldFooterShowVertically()) {
+    footerElement.classList.add('footer--vertical');
+  } else {
+    footerElement.classList.remove('footer--vertical');
+  }
+})();
 
 menuBtn.addEventListener('click', () => {
   if (!showMenu) {

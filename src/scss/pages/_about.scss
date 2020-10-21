@@ -29,6 +29,12 @@
       padding-bottom: 1rem;
     }
   }
+
+  @include respond-to('md') {
+    .about__bio {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 .jobs {
@@ -52,13 +58,13 @@
       margin: 0.3rem 0;
     }
   }
-
-  .social-icons {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
-footer {
-  transform: rotate(90deg) translate(-3rem, -5rem);
+.social-icons {
+  display: flex;
+  flex-direction: column;
 }
+
+// footer {
+//   transform: rotate(90deg) translate(-3rem, -5rem);
+// }

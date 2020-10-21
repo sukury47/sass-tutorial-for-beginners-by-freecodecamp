@@ -7,3 +7,7 @@ footer {
   padding: 1rem;
   color: set-text-color($primary-color);
 }
+
+.footer--vertical {
+  transform: rotate(90deg) translate(-3rem, -5rem);
+}
